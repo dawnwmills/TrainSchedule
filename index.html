@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<title>Train Schedule</title>
 
+	<!-- Bootstrap and jQuery Reference -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+    <!-- Moment.js Reference -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!-- CSS Reference -->
+  	<link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+	
+ 	<!-- Jumbotron -->
+	<div class="container">		
+	<div class="jumbotron">
+			<div class="img"></div>
+				<div class="container">	
+					<div class="row">
+ 		<h1><strong>Speedy Railways</strong></h1>
+
+ 		<!-- H2- courtesy of my baby boy-Nik -->
+  		<h2>Bada Bing - Pow - Bada Boom!</h2>
+  		
+  		</div>
+  		</div> 
+  		</div>
+  		</div>
+
+  	
+  	<div class="container">					
+
+	
+
+	<div class="panel panel-primary">
+	<div class="panel-heading">
+		<h2>Current Train Schedule</h2>
+		<table class="table table-striped" id='train-table'>
+			<thead>
+				<tr>
+					<th>Train Name</th>
+					<th>Destination</th>
+					<th>Frequency (min)</th>
+					<th>Next Arrival</th>
+					<th>Minutes Away</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr>
+					<td>Shaun Trailways</td>
+					<td>Orlando, Florida</td>
+					<td>480</td>
+					<td>05:00</td>
+					<td>20</td>
+				</tr> 
+			
+				<!-- My son's input again! -->
+				<tr>
+					<td>Fried Chicken Blaze</td>
+					<td>Wilmington, North Carolina</td>
+					<td>02:00</td>
+					<td>04:00</td>
+					<td>60</td>
+				</tr> 
+
+				<tr>
+					<td>KiKi Track</td>
+					<td>Manhatten, New York</td>
+					<td>720</td>
+					<td>10:00</td>
+					<td>5</td>
+				</tr> 
+			</tbody>
+		</table>
+	</div>
+
+	<div class="container">
+		<div class="col-xs-12">
+			<div class="row">
+
+				<h2>Add Train</h2>
+	
+
+	<div class="form-group">
+			<label for="input-train" class="col-sm-2 contol-label">Train Name</label><br>
+			<div class="col-sm-11 contol-label">
+			<input type="train" class="form-control" id="input-train" placeholder="Enter train name" name="train"><br>
+		</div>
+	</div>
+
+		<div class="form-group">
+			<label for="input-place" class="col-sm-2 contol-label">Destination</label><br>
+			<div class="col-sm-11 contol-label">
+			<input type="destination" class="form-control" id="input-place" placeholder="Enter Destination" name="destination"><br>
+		</div>
+		
+		<div class="form-group">
+			<label for="input-time" class="col-sm-8 contol-label">First Train Time (HH:mm - military time)</label><br>
+			<div class="col-sm-11 contol-label">
+			<input type="first" class="form-control" id="input-time" placeholder="Enter first arrival time" name="first"><br>
+		</div>
+		
+		<div class="form-group">
+			<label for="input-frequency" class="col-sm-2 contol-label">Frequency (min)</label><br>
+			<div class="col-sm-11 contol-label">
+			<input type="frequency" class="form-control" id="input-frequency" placeholder="Enter frequency in minutes" name="frequency"><br>
+		</div>
+
+			<div class="col-sm-2 contol-label">
+			<button class="btn btn-primary btn-lg" id="add-train-btn" type="submit">SUBMIT</button><br>
+	</form><br>
+		</div>	
+	</div>
+</div>
+
+	<!-- JavaScript -->
+    <script src="./assets/javascript/schedule.js"></script>
+
+</body>
+</html>
